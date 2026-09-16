@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILIAH BANA - Portal Informasi Hukum Bawaslu Tanah Datar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 0;
+        }
+        .card-category {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            border-radius: 12px;
+        }
+        .card-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .jdih-badge {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fa-solid fa-scale-balanced me-2 text-warning"></i>PILIAH BANA
+            </a>
+            <span class="navbar-text text-white-50 d-none d-md-inline">
+                Bawaslu Kabupaten Tanah Datar
+            </span>
+        </div>
+    </nav>
+
+    <!-- Hero / Header -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="fw-bold display-5 mb-2">PORTAL "PILIAH BANA"</h1>
+            <p class="lead mb-4">Pusat Informasi dan Layanan Informasi Aturan & Hukum Terpadu<br><small class="fs-6 opacity-75">Menghubungkan Anda ke Seluruh Sumber Hukum Resmi Republik Indonesia</small></p>
+            
+            <!-- Form Pencarian -->
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="input-group input-group-lg shadow-sm">
+                        <input type="text" id="searchInput" class="form-for" placeholder="Cari aturan... (Contoh: SBM, Disiplin ASN, Perbawaslu, Pengawasan)">
+                        <button class="btn btn-warning fw-bold text-dark" type="button"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        
+        <h3 class="fw-bold border-start border-4 border-primary ps-3 mb-4">Pengelompokan Peraturan Berdasarkan Substansi</h3>
+        
+        <div class="row g-4" id="categoryContainer">
+            
+            <!-- Kategori 1: Ke-Bawaslu-an & Pemilu -->
+            <div class="col-md-4 item-card">
+                <div class="card h-100 card-category shadow-sm border-top border-4 border-danger">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-check-to-slot fa-2x text-danger me-3"></i>
+                            <h5 class="card-title fw-bold m-0">Ke-Bawaslu-an & Pemilu</h5>
+                        </div>
+                        <p class="card-text text-muted small">Perbawaslu, PKPU, UU Pemilu & Pilkada, serta Petunjuk Teknis Pengawasan.</p>
+                        <ul class="list-unstyled small mb-3">
+                            <li><a href="https://jdih.bawaslu.go.id" target="_blank" class="text-decoration-none">▸ JDIH Bawaslu RI</a></li>
+                            <li><a href="https://jdih.kpu.go.id" target="_blank" class="text-decoration-none">▸ JDIH KPU RI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 2: Kepegawaian & SDM ASN -->
+            <div class="col-md-4 item-card">
+                <div class="card h-100 card-category shadow-sm border-top border-4 border-primary">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-users-gear fa-2x text-primary me-3"></i>
+                            <h5 class="card-title fw-bold m-0">Kepegawaian & SDM (ASN)</h5>
+                        </div>
+                        <p class="card-text text-muted small">UU ASN, Peraturan MenPAN-RB, Regulasi BKN, Cuti, Disiplin, & Kinerja Pegawai.</p>
+                        <ul class="list-unstyled small mb-3">
+                            <li><a href="https://jdih.menpan.go.id" target="_blank" class="text-decoration-none">▸ JDIH MenPAN-RB</a></li>
+                            <li><a href="https://jdih.bkn.go.id" target="_blank" class="text-decoration-none">▸ JDIH BKN</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 3: Keuangan & Anggaran -->
+            <div class="col-md-4 item-card">
+                <div class="card h-100 card-category shadow-sm border-top border-4 border-success">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-sack-dollar fa-2x text-success me-3"></i>
+                            <h5 class="card-title fw-bold m-0">Keuangan & Standar Biaya</h5>
+                        </div>
+                        <p class="card-text text-muted small">PMK, Standar Biaya Masukan (SBM), Perjalanan Dinas, Pertanggungjawaban Keuangan.</p>
+                        <ul class="list-unstyled small mb-3">
+                            <li><a href="https://jdih.kemenkeu.go.id" target="_blank" class="text-decoration-none">▸ JDIH Kemenkeu</a></li>
+                            <li><a href="https://jdih.bpk.go.id" target="_blank" class="text-decoration-none">▸ JDIH BPK RI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 4: Tata Kelola & Pemerintahan -->
+            <div class="col-md-4 item-card">
+                <div class="card h-100 card-category shadow-sm border-top border-4 border-warning">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-building-columns fa-2x text-warning me-3"></i>
+                            <h5 class="card-title fw-bold m-0">Pemerintahan & KIP</h5>
+                        </div>
+                        <p class="card-text text-muted small">Keterbukaan Informasi Publik (KIP), Regulasi Kemendagri, & Pemda.</p>
+                        <ul class="list-unstyled small mb-3">
+                            <li><a href="https://jdih.kemendagri.go.id" target="_blank" class="text-decoration-none">▸ JDIH Kemendagri</a></li>
+                            <li><a href="https://jdih.tanahdatar.go.id" target="_blank" class="text-decoration-none">▸ JDIH Pemkab Tanah Datar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 5: Keputusan & Aturan Internal -->
+            <div class="col-md-4 item-card">
+                <div class="card h-100 card-category shadow-sm border-top border-4 border-info">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-folder-open fa-2x text-info me-3"></i>
+                            <h5 class="card-title fw-bold m-0">Internal Tanah Datar</h5>
+                        </div>
+                        <p class="card-text text-muted small">Surat Edaran Internal, SK Ketua, SK Kepala Sekretariat Bawaslu Tanah Datar.</p>
+                        <ul class="list-unstyled small mb-3">
+                            <li><a href="#" class="text-decoration-none">▸ Arsip Surat Edaran Internal</a></li>
+                            <li><a href="#" class="text-decoration-none">▸ SK Sekretariat / Komisioner</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori 6: Portal Nasional (JDIHN) -->
+            <div class="col-md-4 item-card">
+                <div class="card h-100 card-category shadow-sm border-top border-4 border-secondary">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-network-wired fa-2x text-secondary me-3"></i>
+                            <h5 class="card-title fw-bold m-0">JDIHN (Pusat Data Nasional)</h5>
+                        </div>
+                        <p class="card-text text-muted small">Akses ke Jaringan Dokumentasi dan Informasi Hukum Nasional (BPHN/Kemenkumham).</p>
+                        <ul class="list-unstyled small mb-3">
+                            <li><a href="https://jdihn.go.id" target="_blank" class="text-decoration-none">▸ Portal JDIHN Pusat</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Banner Layanan Informasi -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="bg-light p-4 rounded-3 border d-flex justify-content-between align-items-center flex-wrap">
+                    <div>
+                        <h4 class="fw-bold mb-1"><i class="fa-solid fa-circle-info text-primary me-2"></i>Butuh Bantuan Pencarian Aturan?</h4>
+                        <p class="mb-0 text-muted">Tim Subbagian Hukum Bawaslu Tanah Datar siap membantu menyediakan dokumen aturan yang Anda butuhkan.</p>
+                    </div>
+                    <a href="https://wa.me/628xxxxxxxxxx" target="_blank" class="btn btn-success mt-3 mt-md-0 fw-bold"><i class="fa-brands fa-whatsapp me-2"></i>Layanan Konsultasi / Request</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <small>Aksi Perubahan PKP - <strong>PILIAH BANA</strong> © Bawaslu Kabupaten Tanah Datar</small>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
